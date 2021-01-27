@@ -241,6 +241,7 @@ var displayPlaceholders = function() {
     placeholder.on("click",
         function() {
           // TODO
+          nextTrial();
         }
       );
 
@@ -255,7 +256,10 @@ var keyListener = function(event) {
     displayShapes();
   }
 
-
+  if(ctx.state == state.SHAPES && event.code == "Space") {
+    d3.select("#instructions").remove();
+    displayPlaceholders();
+  }
 }
 
 var downloadLogs = function(event) {
