@@ -257,8 +257,8 @@ var keyListener = function(event) {
   }
 
   if(ctx.state == state.SHAPES && event.code == "Space") {
-    d3.select("#instructions").remove();
     displayPlaceholders();
+    d3.select("#instructions").remove();    
   }
 }
 
